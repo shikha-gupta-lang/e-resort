@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking-form</title>
+</head>
+<body>
+        <main>
+          <h2>Room Booking Form</h2>
+  <form id="bookingForm">
+    <label>Name:</label><input type="text" id="name" required><br>
+    <label>Room Type:</label>
+    <select id="roomType">
+      <option value="standard">Standard</option>
+      <option value="deluxe">Deluxe</option>
+      <option value="suite">Suite</option>
+    </select><br>
+    <label>Check-in Date:</label><input type="date" id="checkin"><br>
+    <label>Check-out Date:</label><input type="date" id="checkout"><br>
+    <button type="submit">Book Now</button>
+  </form>
+
+        </main>
+        <script>
+          function showPopup(type) {
+    const popup = document.getElementById(`${type}-popup`);
+    if (popup) popup.style.display = 'flex';
+  }
+  function hidePopup(type) {
+    const popup = document.getElementById(`${type}-popup`);
+    if (popup) popup.style.display = 'none';
+  }
+  document.addEventListener('click', function (e) {
+    const loginPopup = document.getElementById('login-popup');
+    const registerPopup = document.getElementById('register-popup');
+    if (
+      loginPopup.style.display === 'flex' &&
+      !e.target.closest('.popup-form') &&
+      !e.target.closest('[onclick^="showPopup"]')
+    ) {
+      loginPopup.style.display = 'none';
+    }
+    if (
+      registerPopup.style.display === 'flex' &&
+      !e.target.closest('.popup-form') &&
+      !e.target.closest('[onclick^="showPopup"]')
+    ) {
+      registerPopup.style.display = 'none';
+    }
+  });
+  function validateRegister() {
+    const password = document.getElementById("reg-password").value;
+    const confirmPassword = document.getElementById("reg-confirm-password").value;
+  
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return false;
+    }
+  
+    alert("Registration successful!");
+    hidePopup('register');
+    return true;
+  }
+        </script>
+</body>
+</html>

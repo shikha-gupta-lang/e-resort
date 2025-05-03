@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resort Paradise</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+  <header class="resort-header">
+    <div class="top-bar">
+      <div class="logo">
+        <span>E-<span class="highlight">R</span>ESORT</span>
+      </div>
+      <div class="contact">
+        <i class="fas fa-phone"></i> (789) 1234-567
+      </div>
+      <div class="top-icons">
+        <button onclick="showPopup('login')">Login</button>
+        <button onclick="showPopup('register')">Register</button>
+      </div>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-x-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fas fa-envelope"></i>
+      </div>
+    </div>
+  </header>
+  <div class="popup-overlay" id="login-popup">
+    <div class="popup-form">
+      <div class="popup-close" onclick="hidePopup('login')">&times;</div>
+      <h4>Login</h4>
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="Password">
+      <button>Login</button>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="register-popup">
+    <div class="popup-form">
+      <div class="popup-close" onclick="hidePopup('register')">&times;</div>
+      <h4>Register</h4>
+      <input type="text" placeholder="Username">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <input type="password" placeholder="Confirm Password" id="reg-confirm-password">
+      <button onclick="validateRegister()">Register
+      </button>
+    </div>
+  </div>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="rooms.html">ROOMS</a></li>
+              <li><a href="booking.html">BOOKING</a></li>
+              <div class="dropdown">
+                <a href="#">RESORT INFO ▼</a>
+                <div class="dropdown-content">
+                  <a href="#">Room Types</a>
+                  <a href="#">Amenities</a>
+                  <a href="#">Events</a>
+                </div>
+              </div>
+              <li><a href="contact.html">Contact US</a></li>
+              <li class="cart"><i class="fas fa-shopping-bag"></i> 0</li>
+            </ul>
+          </nav>
+        <div class="hero-image">
+        </div>
+  <main>
+    <h1>Pick a destination</h1>
+    <p>This theme comes fully packed with customization options which means you
+      get to personalize this template very easily without asny complexity. <br>
+      You'll be able to make your own colors, turn on/off anything you don't need, 
+      select number of content boxes to show</p>
+      <div class="arrow-down">
+        <img src="image/arrows-down_1_orig.png" alt="">
+      </div>
+      <div class="alt-card-container">
+
+        <div class="alt-row">
+          <div class="alt-card"><img src="image/london.jpg"></div>
+          <div class="alt-card">
+            <h3>London</h3>
+            <p>Starting at $7,000</p>
+          </div>
+          <div class="alt-card"><img src="image/miami.jpg"></div>
+          <div class="alt-card">
+            <h3>Miami</h3>
+            <p>Starting at $23,800</p>
+          </div>
+        </div>
+
+        <div class="alt-row">
+          <div class="alt-card">
+            <h3>Monaco</h3>
+            <p>Starting at $9,200</p>
+          </div>
+          <div class="alt-card"><img src="image/Monaco.jpg"></div>
+          <div class="alt-card">
+            <h3>New York</h3>
+            <p>Starting at $11,000</p>
+          </div>
+          <div class="alt-card"><img src="image/newyork.jpg"></div>
+        </div>
+
+        <div class="alt-row">
+          <div class="alt-card"><img src="image/hainan.jpg"></div>
+          <div class="alt-card">
+            <h3>Hainan</h3>
+            <p>Starting at $11,500</p>
+          </div>
+          <div class="alt-card"><img src="image/newZealand.jpg"></div>
+          <div class="alt-card">
+            <h3>New Zealand</h3>
+            <p>Starting at $16,500</p>
+          </div>
+        </div>
+
+        <div class="alt-row">
+          <div class="alt-card">
+            <h3>Hawai</h3>
+            <p>Starting at $13,000</p>
+          </div>
+          <div class="alt-card"><img src="image/hawai.jpg"></div>
+          <div class="alt-card">
+            <h3>Dubai</h3>
+            <p>Starting at $14,000</p>
+          </div>
+          <div class="alt-card"><img src="image/dubai.jpg"></div>
+        </div>
+      </div>
+      <section id="booking" class="booking-form">
+        <input type="text" placeholder="Arrival Date">
+        <input type="text" placeholder="Departure Date">
+        <input type="text" placeholder="Bed Type">
+        <input type="text" placeholder="Room For">
+        <button>Get A Room</button>
+      </section>         
+  </main>
+    <div class="promo-banner">
+      <img src="image/promo.jpg" alt="promo">
+      <div class="promo-text">
+        <h2>30% DISCOUNT</h2>
+        <p>ON YOUR NEXT DESTINATION.</p>
+        <button>GRAB IT NOW</button>
+      </div>
+    </div>   
+    <footer>
+      <div class="footer-links">
+        <a href="#">Packages</a>
+        <a href="#">Booking</a>
+        <a href="#">Rooms</a>
+        <a href="#">About</a>
+        <a href="#">Contact us</a>
+        <a href="#">Feedback</a>
+        <a href="#">Term & Condition</a>
+        <a href="#">Privacy</a>
+      </div>
+      <p>&copy; 2025 E-RESORT. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
